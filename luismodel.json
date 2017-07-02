@@ -1,0 +1,144 @@
+{
+    "luis_schema_version": "2.1.0",
+    "versionId": "0.1",
+    "name": "VocalisBotLuisModel",
+    "desc": "Vocalis is a bot that helps you out with a presentation",
+    "culture": "en-us",
+    "intents": [
+        {
+            "name": "CrowdInsights"
+        },
+        {
+            "name": "Introduce"
+        },
+        {
+            "name": "None"
+        },
+        {
+            "name": "SendPicture"
+        }
+    ],
+    "entities": [
+        {
+            "name": "name"
+        },
+        {
+            "name": "object"
+        }
+    ],
+    "composites": [],
+    "closedLists": [],
+    "bing_entities": [],
+    "actions": [],
+    "model_features": [],
+    "regex_features": [],
+    "utterances": [
+        {
+            "text": "hello",
+            "intent": "Introduce",
+            "entities": []
+        },
+        {
+            "text": "hi",
+            "intent": "Introduce",
+            "entities": []
+        },
+        {
+            "text": "my name is marco",
+            "intent": "Introduce",
+            "entities": [
+                {
+                    "entity": "name",
+                    "startPos": 11,
+                    "endPos": 15
+                }
+            ]
+        },
+        {
+            "text": "hi, i'm marco",
+            "intent": "Introduce",
+            "entities": [
+                {
+                    "entity": "name",
+                    "startPos": 8,
+                    "endPos": 12
+                }
+            ]
+        },
+        {
+            "text": "hey, i'm danique",
+            "intent": "Introduce",
+            "entities": [
+                {
+                    "entity": "name",
+                    "startPos": 9,
+                    "endPos": 15
+                }
+            ]
+        },
+        {
+            "text": "how does the crowd respond to my presentation",
+            "intent": "CrowdInsights",
+            "entities": []
+        },
+        {
+            "text": "do the people like my presentation",
+            "intent": "CrowdInsights",
+            "entities": []
+        },
+        {
+            "text": "does the crowd like my presentation",
+            "intent": "CrowdInsights",
+            "entities": []
+        },
+        {
+            "text": "what did the people think of my presentation",
+            "intent": "CrowdInsights",
+            "entities": []
+        },
+        {
+            "text": "do you have a picture of a robot",
+            "intent": "SendPicture",
+            "entities": [
+                {
+                    "entity": "object",
+                    "startPos": 27,
+                    "endPos": 31
+                }
+            ]
+        },
+        {
+            "text": "do you know how a robot looks like",
+            "intent": "SendPicture",
+            "entities": [
+                {
+                    "entity": "object",
+                    "startPos": 18,
+                    "endPos": 22
+                }
+            ]
+        },
+        {
+            "text": "show me how a robot looks like",
+            "intent": "SendPicture",
+            "entities": [
+                {
+                    "entity": "object",
+                    "startPos": 14,
+                    "endPos": 18
+                }
+            ]
+        },
+        {
+            "text": "how does a robot look like",
+            "intent": "SendPicture",
+            "entities": [
+                {
+                    "entity": "object",
+                    "startPos": 11,
+                    "endPos": 15
+                }
+            ]
+        }
+    ]
+}
