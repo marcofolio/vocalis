@@ -35,7 +35,7 @@ namespace VocalisBot.Dialogs
 
                 // Parse the result
                 await context.PostAsync($"I think you're looking at _{vision.Text}_ , neat! I'm about _{Math.Floor(vision.Confidence * 100)}_% sure.");
-                await context.PostAsync($"Your crowd consists of *{facesAndGender.Length}* people, from which *{facesAndGender.Select(x => x.FaceAttributes.Gender.Equals("male")).Count()}* are male and *{facesAndGender.Select(x => x.FaceAttributes.Gender.Equals("female")).Count()}* are female.");
+                await context.PostAsync($"Your crowd consists of *{facesAndGender.Length}* people, from which *{facesAndGender.Where(x => x.FaceAttributes.Gender.Equals("male")).Count()}* are male and *{facesAndGender.Where(x => x.FaceAttributes.Gender.Equals("female")).Count()}* are female.");
             }
             catch (Exception ex)
             {
