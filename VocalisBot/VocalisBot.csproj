@@ -140,11 +140,13 @@
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\CrowdInsightsDialog.cs" />
     <Compile Include="Dialogs\IntroductionDialog.cs" />
+    <Compile Include="Dialogs\PlayGameDialog.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Dialogs\SendPictureDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hangman.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response.Designer.cs">
       <AutoGen>True</AutoGen>

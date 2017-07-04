@@ -196,6 +196,60 @@ namespace VocalisBot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to That&apos;s correct! Your word: [{0}]. What&apos;s your next guess?.
+        /// </summary>
+        internal static string PlayGame_CorrectGuess {
+            get {
+                return ResourceManager.GetString("PlayGame_CorrectGuess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I hope you enjoyed that game!.
+        /// </summary>
+        internal static string PlayGame_Done {
+            get {
+                return ResourceManager.GetString("PlayGame_Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You lost! [{0}] was your word. Want to play again?.
+        /// </summary>
+        internal static string PlayGame_Lost {
+            get {
+                return ResourceManager.GetString("PlayGame_Lost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Let&apos;s give it another go, shall we? Type any character to guess, type &apos;quit&apos; to stop..
+        /// </summary>
+        internal static string PlayGame_Retry {
+            get {
+                return ResourceManager.GetString("PlayGame_Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sweet, let&apos;s play a game of Hangman! Type any character to guess, type &apos;quit&apos; to stop..
+        /// </summary>
+        internal static string PlayGame_Start {
+            get {
+                return ResourceManager.GetString("PlayGame_Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You won! [{0}] was your word. Want to play again?.
+        /// </summary>
+        internal static string PlayGame_Won {
+            get {
+                return ResourceManager.GetString("PlayGame_Won", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You wanted to see what exactly?.
         /// </summary>
         internal static string SendPicture_Clarify {

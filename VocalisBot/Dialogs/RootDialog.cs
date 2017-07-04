@@ -108,6 +108,21 @@ namespace VocalisBot.Dialogs
 
         #endregion
 
+        #region PlayGame
+
+        [LuisIntent("PlayGame")]
+        public async Task PlayGame(IDialogContext context, LuisResult result)
+        {
+            context.Call(new PlayGameDialog(), ResumeAfterPlayGameDialog);
+        }
+
+        private async Task ResumeAfterPlayGameDialog(IDialogContext context, IAwaitable<object> result)
+        {
+            await context.PostAsync(Response.PlayGame_Done);
+        }
+
+        #endregion
+
         private string TryFindEntity(LuisResult result, string type)
         {
             // Check if LUIS has identified the entity that we should look for.

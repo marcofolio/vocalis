@@ -162,6 +162,24 @@
   <data name="None_Empty" xml:space="preserve">
     <value>I'm sorry, I don't know what you want.. Care to ask something different?</value>
   </data>
+  <data name="PlayGame_CorrectGuess" xml:space="preserve">
+    <value>That's correct! Your word: [{0}]. What's your next guess?</value>
+  </data>
+  <data name="PlayGame_Done" xml:space="preserve">
+    <value>I hope you enjoyed that game!</value>
+  </data>
+  <data name="PlayGame_Lost" xml:space="preserve">
+    <value>You lost! [{0}] was your word. Want to play again?</value>
+  </data>
+  <data name="PlayGame_Retry" xml:space="preserve">
+    <value>Let's give it another go, shall we? Type any character to guess, type 'quit' to stop.</value>
+  </data>
+  <data name="PlayGame_Start" xml:space="preserve">
+    <value>Sweet, let's play a game of Hangman! Type any character to guess, type 'quit' to stop.</value>
+  </data>
+  <data name="PlayGame_Won" xml:space="preserve">
+    <value>You won! [{0}] was your word. Want to play again?</value>
+  </data>
   <data name="SendPicture_Clarify" xml:space="preserve">
     <value>You wanted to see what exactly?</value>
   </data>

@@ -2,9 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Threading.Tasks;
-using System.Globalization;
 using Microsoft.Bot.Connector;
 using VocalisBot.Cognitive;
 
