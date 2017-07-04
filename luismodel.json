@@ -15,6 +15,9 @@
             "name": "None"
         },
         {
+            "name": "PlayGame"
+        },
+        {
             "name": "SendPicture"
         }
     ],
@@ -44,6 +47,21 @@
             "entities": []
         },
         {
+            "text": "start a game",
+            "intent": "PlayGame",
+            "entities": []
+        },
+        {
+            "text": "i want to play",
+            "intent": "PlayGame",
+            "entities": []
+        },
+        {
+            "text": "i want to play a game",
+            "intent": "PlayGame",
+            "entities": []
+        },
+        {
             "text": "my name is marco",
             "intent": "Introduce",
             "entities": [
@@ -53,6 +71,11 @@
                     "endPos": 15
                 }
             ]
+        },
+        {
+            "text": "can we play a game",
+            "intent": "PlayGame",
+            "entities": []
         },
         {
             "text": "hi, i'm marco",
