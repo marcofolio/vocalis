@@ -56,6 +56,9 @@ namespace VocalisBot.Dialogs
                 case IntroductionType.Picture:
                     PromptDialog.Attachment(context, ResumeAfterPictureClarification, Response.Introduction_PictureStart);
                     break;
+                case IntroductionType.Work:
+                    PromptDialog.Text(context, ResumeAfterWorkClarification, Response.Introduction_WorkStart);
+                    break;
                 case IntroductionType.Nothing:
                     context.Done<object>(null);
                     break;
@@ -112,6 +115,43 @@ namespace VocalisBot.Dialogs
             {
                 await context.PostAsync($"ERROR: {ex.Message}");
                 await context.PostAsync(Response.Error);
+            }
+
+            await RestartAsync(context);
+        }
+
+        private async Task ResumeAfterWorkClarification(IDialogContext context, IAwaitable<string> result)
+        {
+            var company = await result;
+
+            if(company.ToLowerInvariant().Equals("infosupport"))
+            {
+                var reply = context.MakeMessage();
+                var heroCard = new HeroCard()
+                {
+                    Title = "InfoSupport",
+                    Subtitle = "InfoSupport is an IT-company based in Veenendaal, The Netherlands. We specialize in building, hosting and maintaining custom software solutions.",
+                    Images = new List<CardImage>
+                        {
+                            new CardImage(url: "https://innovationprojects.infosupport.com/wp-content/uploads/2015/12/Info-Support-30cm-300DPI-PNG.png")
+                        },
+                    Buttons = new List<CardAction>
+                        {
+                            new CardAction()
+                                {
+                                    Value = "https://www.infosupport.com/",
+                                    Type = "openUrl",
+                                    Title = "Visit website"
+                                }
+                        }
+                };
+
+                reply.Attachments = new List<Attachment>
+                {
+                    heroCard.ToAttachment()
+                };
+                await context.PostAsync(reply);
+                await context.PostAsync($"I've been told you're a *manager*, but you prefer yourself to be called a *Code Monkey*, correct?");
             }
 
             await RestartAsync(context);

@@ -159,6 +159,9 @@
   <data name="Introduction_UnknownStart" xml:space="preserve">
     <value>I don't know that IntroductionType.</value>
   </data>
+  <data name="Introduction_WorkStart" xml:space="preserve">
+    <value>What company do you work for?</value>
+  </data>
   <data name="None_Empty" xml:space="preserve">
     <value>I'm sorry, I don't know what you want.. Care to ask something different?</value>
   </data>

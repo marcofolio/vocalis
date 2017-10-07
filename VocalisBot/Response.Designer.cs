@@ -19,7 +19,7 @@ namespace VocalisBot {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Response {
@@ -183,6 +183,15 @@ namespace VocalisBot {
         internal static string Introduction_UnknownStart {
             get {
                 return ResourceManager.GetString("Introduction_UnknownStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What company do you work for?.
+        /// </summary>
+        internal static string Introduction_WorkStart {
+            get {
+                return ResourceManager.GetString("Introduction_WorkStart", resourceCulture);
             }
         }
         
