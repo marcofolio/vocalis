@@ -13,6 +13,11 @@ namespace VocalisBot.Dialogs
     [Serializable]
     public class IntroductionDialog : IDialog<object>
     {
+        private enum IntroductionType
+        {
+            Hobbies, Picture, Work, Residence, Nothing
+        }
+
         private string _name;
 
         public IntroductionDialog(string name)
@@ -34,24 +39,24 @@ namespace VocalisBot.Dialogs
 
         private void IntroductionTypeClarification(IDialogContext context)
         {
-            var options = new string[] { "hobbies", "picture", "work", "residence", "nothing" };
-            PromptDialog.Choice<string>(context, ResumeAfterIntroductionTypeClarification, options, Response.Introduction_Choice);
+            var options = new IntroductionType[] { IntroductionType.Hobbies, IntroductionType.Picture, IntroductionType.Work, IntroductionType.Residence, IntroductionType.Nothing };
+            var descriptions = new string[] { "My hobbies", "A picture of me", "Something about work", "My residence", "Nothing" };
+            PromptDialog.Choice<IntroductionType>(context, ResumeAfterIntroductionTypeClarification, options, Response.Introduction_Choice, descriptions: descriptions);
         }
 
-        private async Task ResumeAfterIntroductionTypeClarification(IDialogContext context, IAwaitable<string> result)
+        private async Task ResumeAfterIntroductionTypeClarification(IDialogContext context, IAwaitable<IntroductionType> result)
         {
-            string introductionType = await result;
+            IntroductionType introductionType = await result;
 
-            introductionType = introductionType.ToUpperInvariant();
             switch (introductionType)
             {
-                case "HOBBIES":
+                case IntroductionType.Hobbies:
                     PromptDialog.Text(context, ResumeAfterHobbiesClarification, Response.Introduction_HobbiesStart);
                     break;
-                case "PICTURE":
+                case IntroductionType.Picture:
                     PromptDialog.Attachment(context, ResumeAfterPictureClarification, Response.Introduction_PictureStart);
                     break;
-                case "NOTHING":
+                case IntroductionType.Nothing:
                     context.Done<object>(null);
                     break;
                 default:
