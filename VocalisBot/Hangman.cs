@@ -18,7 +18,10 @@ namespace VocalisBot
 
         public Hangman()
         {
-            var words = new List<string>() { "robot", "chatbot", "azure", "cognitive", "services", "microsoft" };
+            var words = new List<string>() {
+                "robot", "chatbot", "azure", "cognitive", "services", "microsoft",
+                "framework", "intelligence", "dialog", "conversation", "hangman", "webapi"
+            };
 
             var r = new Random();
             var pos = r.Next(words.Count);
